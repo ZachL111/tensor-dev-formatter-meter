@@ -1,0 +1,17 @@
+{
+  "repo": "tensor-dev-formatter-meter",
+  "thresholds": {
+    "signal": 4,
+    "slack": 1,
+    "confidence": 2,
+    "drag": 4,
+    "ship": 191,
+    "watch": 102
+  },
+  "terms": [
+    "change width",
+    "diagnostic quality",
+    "review cost",
+    "safe rewrite"
+  ]
+}
