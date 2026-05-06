@@ -1,0 +1,73 @@
+{
+  "repo": "tensor-dev-formatter-meter",
+  "language": "Rust",
+  "category": "Developer tools",
+  "goal": "Build a Rust toolkit that studies formatter behavior through fixture event logs, with golden state snapshots and no network dependency.",
+  "review_model": {
+    "terms": [
+      "change width",
+      "diagnostic quality",
+      "review cost",
+      "safe rewrite"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "change width",
+      "signal": 73,
+      "slack": 24,
+      "drag": 31,
+      "confidence": 64,
+      "score": 141,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "diagnostic quality",
+      "signal": 72,
+      "slack": 39,
+      "drag": 22,
+      "confidence": 74,
+      "score": 191,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "review cost",
+      "signal": 85,
+      "slack": 21,
+      "drag": 15,
+      "confidence": 77,
+      "score": 223,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "safe rewrite",
+      "signal": 53,
+      "slack": 20,
+      "drag": 23,
+      "confidence": 65,
+      "score": 122,
+      "lane": "watch"
+    },
+    {
+      "name": "stale",
+      "focus": "change width",
+      "signal": 88,
+      "slack": 35,
+      "drag": 25,
+      "confidence": 75,
+      "score": 211,
+      "lane": "ship"
+    }
+  ]
+}
